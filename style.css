@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font: "Poppins", sans-serif;
+  --hue:210;
+  --white: #ffffff;
+  --black: #000000;
+  --theme-color: hsl(var(--hue),76%,30%);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--font);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  word-spacing: 0.2em;
+  text-align: center;
+  margin: 2rem 0 0 0;
+  color: var(--theme-color);
+}
+
+*::selection {
+  background-color: var(--theme-color);
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+.container>p{
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  color: hsl(167, 37%, 47%);
+}
+.btn {
+  outline: none;
+  border: none;
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.9;
+  border-radius: 0.4em;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.todo-title {
+  border: 1px solid var(--theme-color);
+  background-color: #f4f4f4;
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.todo-title input[type="text"] {
+  border: none;
+  width: 75%;
+  outline: none;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  word-spacing: 0.1em;
+}
+
+.todo-title .btn {
+  background-color: var(--theme-color);
+  color: #fff;
+  width: 20%;
+}
+.added-todo-list {
+  background-color: var(--theme-color);
+  border-radius: 0.5rem;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+}
+.added-todo-list p {
+  width: 70%;
+  color: white;
+}
+.todo-tools {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.todo-tools .checkmark {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-color: white;
+  position: relative;
+  border-radius: 5px;
+}
+
+.todo-tools .checkmark:hover {
+  background-color: #eaeaea;
+}
+.complete{
+  text-decoration:line-through;
+  opacity: 0.5;
+}
+.todo-done {
+  width: 40%;
+  height: 82%;
+  border: solid var(--black);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  bottom:3px;
+  left: 5px;
+
+}
+.todo-tools .todo-edit {
+  color: rgb(122, 251, 122);
+}
+.todo-tools .todo-edit:hover {
+  color: rgb(179, 248, 179);
+}
+.todo-tools .todo-delete {
+  color: rgb(248, 113, 108);
+}
+.todo-tools .todo-delete:hover {
+  color: rgb(250, 141, 138);
+}
